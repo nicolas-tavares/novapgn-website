@@ -84,15 +84,28 @@ h2 {
     background-color: #0f172a;
     color: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 6px;
+    border-radius: 10px;
     text-decoration: none;
     margin-top: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn:hover {
-    background-color: #0d1520;
+.btn-page {
+    display: inline-block;
+    background-color: #4B84B3;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.btn-page:hover {
+
     transform: scale(1.05);
 }
 
@@ -127,7 +140,6 @@ footer a:hover {
 }
 
 .footer-bottom {
-    border-top: 1px solid #333;
     margin-top: 2rem;
     padding-top: 1rem;
     color: #777;
@@ -135,7 +147,8 @@ footer a:hover {
 }
 
 #text-bottom {
-    color: #4682b4;
+    color: #4B84B3;
+    font-weight: 750;
 }
 
 #text-bottom1 {
