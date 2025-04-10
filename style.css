@@ -9,16 +9,19 @@ html {
 
 ::-webkit-scrollbar {
     width: 10px;
+
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #b4b4b4;
+
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #3f7fb3;
     border-radius: 10px;
     border: 2px solid #f1f1f1;
+
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -99,17 +102,16 @@ header ul li a:hover {
 
 
 .clientes {
-    padding: 5rem 2rem;
+    padding: 6rem 3rem;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
 }
 
 
-
 .clientes-container {
     display: flex;
-    gap: 2rem; /* espaçamento entre boxes */
+    gap: 4rem;
     overflow-x: auto;
     padding: 1rem 0;
     scroll-snap-type: x mandatory;
@@ -119,20 +121,18 @@ header ul li a:hover {
 .cliente {
     flex: 0 0 auto;
     width: 150px;
-    text-align: center;
     scroll-snap-align: start;
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.205);
     padding: 1rem;
 }
 
 .cliente img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* mantém imagem sempre quadrada */
-    object-fit: contain; /* preserva proporção dentro do quadrado */
-    border-radius: 12px;
-
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 15px;
     margin-bottom: 0.5rem;
 }
 
@@ -140,8 +140,7 @@ header ul li a:hover {
 
 .cliente-img-box {
     width: 100%;
-    aspect-ratio: 1 / 1; /* garante formato quadrado */
-
+    aspect-ratio: 1 / 1;
     border-radius: 20px;
     padding: 10px;
     display: flex;
@@ -151,11 +150,7 @@ header ul li a:hover {
     overflow: hidden;
 }
 
-.cliente-img-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
+
 
 .clientes-wrapper {
     position: relative;
@@ -170,17 +165,7 @@ header ul li a:hover {
 
 
 
-/* Scrollbar estilizada opcional */
-.clientes-container::-webkit-scrollbar {
-    height: 10px;
-}
-.clientes-container::-webkit-scrollbar-thumb {
-    background-color: #3f7fb3;
-    border-radius: 10px;
-}
-.clientes-container::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-}
+
 
 
 
@@ -201,6 +186,16 @@ header ul li a:hover {
     header ul {
         display: none;
     }
+
+    .clientes-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .clientes-container {
+        width: max-content;
+    }
+
 
 }
 
