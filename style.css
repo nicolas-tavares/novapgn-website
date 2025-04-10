@@ -98,6 +98,93 @@ header ul li a:hover {
 }
 
 
+.clientes {
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+.clientes-container {
+    display: flex;
+    gap: 2rem; /* espaçamento entre boxes */
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cliente {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+    scroll-snap-align: start;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1rem;
+}
+
+.cliente img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* mantém imagem sempre quadrada */
+    object-fit: contain; /* preserva proporção dentro do quadrado */
+    border-radius: 12px;
+
+    margin-bottom: 0.5rem;
+}
+
+
+
+.cliente-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* garante formato quadrado */
+
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.cliente-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.clientes-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+/* Scrollbar estilizada opcional */
+.clientes-container::-webkit-scrollbar {
+    height: 10px;
+}
+.clientes-container::-webkit-scrollbar-thumb {
+    background-color: #3f7fb3;
+    border-radius: 10px;
+}
+.clientes-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+
+
+
 /* ========= MODO MOBILE ========= */
 
 @media (max-width: 767px) {
