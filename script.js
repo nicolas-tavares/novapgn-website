@@ -19,8 +19,9 @@ const prevBtn = document.querySelector('.cliente-nav.prev');
 const nextBtn = document.querySelector('.cliente-nav.next');
 const clientWidth = 250;
 let currentPosition = 0;
-const visibleClients = 2; // Número de clientes visíveis por vez
+const visibleClients = 0.5; // Número de clientes visíveis por vez
 const totalClients = clientesContainer.children.length;
+
 
 function updateNavigation() {
     prevBtn.style.display = 'flex';
@@ -82,3 +83,4 @@ function sendEmail(e) {
             btn.disabled = false;
         });
 }
+
