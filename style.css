@@ -245,46 +245,6 @@ header ul li a:hover::after {
         display: none;
     }
 
-    .clientes-wrapper {
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-
-    .clientes-container {
-        display: flex;
-        gap: 20px;
-        transition: transform 0.3s ease;
-    }
-
-    .cliente-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(75, 132, 179, 0.9);
-        color: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        cursor: pointer;
-        z-index: 2;
-        transition: background-color 0.3s ease;
-    }
-
-    .cliente-nav:hover {
-        background: rgba(75, 132, 179, 1);
-    }
-
-    .cliente-nav.prev {
-        left: -20px;
-    }
-
-    .cliente-nav.next {
-        right: -20px;
-    }
-
 
 }
 
@@ -335,7 +295,8 @@ h2 {
     background-color: #4B84B3;
     color: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: none;
     text-decoration: none;
     margin-top: 1rem;
     font-weight: bold;

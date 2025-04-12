@@ -19,7 +19,7 @@ const prevBtn = document.querySelector('.cliente-nav.prev');
 const nextBtn = document.querySelector('.cliente-nav.next');
 const clientWidth = 250;
 let currentPosition = 0;
-const visibleClients = 3; // Número de clientes visíveis por vez
+const visibleClients = 2; // Número de clientes visíveis por vez
 const totalClients = clientesContainer.children.length;
 
 function updateNavigation() {
@@ -27,26 +27,25 @@ function updateNavigation() {
     nextBtn.style.display = 'flex';
 }
 
-prevBtn.addEventListener('click', () => {
-    if (currentPosition >= 0) {
-        currentPosition = -(totalClients - visibleClients) * clientWidth;
-    } else {
-        currentPosition += clientWidth;
-    }
-    clientesContainer.style.transform = `translateX(${currentPosition}px)`;
-    updateNavigation();
-});
-
 nextBtn.addEventListener('click', () => {
     const maxScroll = -(totalClients - visibleClients) * clientWidth;
-    if (currentPosition <= maxScroll) {
-        currentPosition = 0;
-    } else {
+    if (currentPosition > maxScroll) {
         currentPosition -= clientWidth;
+    } else {
+        currentPosition = 0; // volta para o início
     }
     clientesContainer.style.transform = `translateX(${currentPosition}px)`;
-    updateNavigation();
 });
+
+prevBtn.addEventListener('click', () => {
+    if (currentPosition < 0) {
+        currentPosition += clientWidth;
+    } else {
+        currentPosition = -(totalClients - visibleClients) * clientWidth; // vai pro final
+    }
+    clientesContainer.style.transform = `translateX(${currentPosition}px)`;
+});
+
 
 
 updateNavigation();
